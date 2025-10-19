@@ -1,0 +1,3 @@
+- Trong chức năng giao dịch bán hàng, loại hệ thống thông tin tương ứng là TPS
+- Trong chức năng phân tích xu hướng kinh doanh, loại hệ thống thông tin tương ứng là DSS
+- Trong bảng tổng quan hiệu suất hàng tháng dành cho CEO,  loại hệ thống thông tin tương ứng là EIS
