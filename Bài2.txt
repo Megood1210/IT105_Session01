@@ -1,0 +1,6 @@
+- Mô hình phù hợp cho dự án A là Waterfall vì dự án đó có yêu cầu đã rõ ràng dựa án đó phù hợp với quy trình tuyến tính, dễ lập kế hoạch, dễ kiểm soát tiến độ ,không 
+cần lặp lại nhiều vòng phát triển.
+- Mô hình phù hợp cho dự án B là Agile vì dư án đó có yêu cầu có thể thay đổi theo phản hồi của người dùng và bệnh viện, vì agile cho phép phát triển theo từng sprint 
+nhỏ, dễ dàng điều chỉnh khi yêu cầu thay đổi.
+- Mô hình phù hợp cho dự án C là Spiral vì dự án có độ rủi ro cao, cần phân tích rủi ro ở mỗi vòng lặp, vì spiral kết hợp ưu điểm của Waterfall và Prototyping, 
+giúp kiểm soát rủi ro hiệu quả.
