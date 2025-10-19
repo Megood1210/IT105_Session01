@@ -1,0 +1,21 @@
+I.Giai đoạn
+ *Planning
+  -Việc cần làm trong dự án "Ứng dụng điểm danh":
+   +Xác định mục tiêu: điểm danh học sinh/sinh viên nhanh chóng qua QR hoặc GPS. Xác định người dùng: giáo viên, sinh viên, quản trị viên. Lập kế hoạch nguồn lực, 
+chi phí và thời gian thực hiện.
+ *Analysis
+  -Việc cần làm trong dự án "Ứng dụng điểm danh":
+   +Thu thập yêu cầu: giáo viên muốn tạo lớp, điểm danh theo buổi; sinh viên điểm danh bằng mã QR; quản trị viên xem báo cáo. Xác định luồng nghiệp vụ, use case, 
+ràng buộc hệ thống.
+ *Design
+  -Việc cần làm trong dự án "Ứng dụng điểm danh":
+   +Thiết kế giao diện, thiết kế bảng Lớp, người dùng, buổi học, lịch sử điểm danh, thiết kế API hoặc kiến trúc hệ thống.
+ *Implementation
+  -Việc cần làm trong dự án "Ứng dụng điểm danh":
+   +Xây dựng frontend, backend xử lý logic và lưu trữ dữ liệu. Tích hợp tính năng quét QR, xác thực tài khoản, gửi thông báo.
+ *Testing
+  -Việc cần làm trong dự án "Ứng dụng điểm danh":
+   +Kiểm thử chức năng: điểm danh đúng giờ, đúng user, kiểm thử hiệu năng khi nhiều sinh viên cùng quét QR, kiểm thử bảo mật, thử nghiệm với lớp học thực tế.
+ *Deployment & Maintenance
+  -Việc cần làm trong dự án "Ứng dụng điểm danh":
+   +Triển khai lên server store, hướng dẫn người dùng., thu thập phản hồi, sửa lỗi, cập nhật tính năng mới.
