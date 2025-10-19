@@ -1,0 +1,49 @@
+| Mục đích                                                            | Loại sơ đồ UML phù hợp|
+| --------------------------------------------------------------------| --------------------- |
+| Mô tả các chức năng của hệ thống và vai trò của từng người dùng     | Use Case Diagram      |
+| Mô tả luồng hoạt động quét QR, tạo buổi học, thống kê               | Activity Diagram      |
+| Mô tả các lớp dữ liệu chính như SinhVien, GiangVien, BuoiHoc, QRCode| Class Diagram         |
+
+I.Trình bày 3 giai đoạn đầu của SDLC
+  *Planning
+   -Mục tiêu dự án: Tự động hóa việc điểm danh, giảm gian lận, tạo báo cáo nhanh chóng.
+   -Đối tượng sử dụng: Giảng viên – Sinh viên – Phòng đào tạo.
+   -Công nghệ dự kiến: Ứng dụng mobile (Android/iOS) + Backend API + Database.
+   -Phạm vi chức năng chính:
+    +Giảng viên: tạo buổi học, hiển thị QR code điểm danh.
+    +Sinh viên: dùng điện thoại quét mã QR để ghi nhận mặt.
+    +Phòng đào tạo: xem báo cáo, thống kê chuyên cần.
+    +Rủi ro cần lưu ý: Sinh viên điểm danh hộ nên cần chống gian lận bằng GPS / camera.
+  *Requirement Analysis
+   -Use case chính
+    | Actor         | Use Case                                                |
+    | ------------- | ------------------------------------------------------- |
+    | Giảng viên    | Tạo buổi học – Hiển thị QR – Xem danh sách đã điểm danh |
+    | Sinh viên     | Đăng nhập – Quét QR – Xem lịch sử điểm danh             |
+    | Phòng đào tạo | Xem thống kê – Xuất báo cáo CSV/PDF                     |
+   -Luồng nghiệp vụ:
+    +Giảng viên tạo buổi học rồi hệ thống sinh mã QR.
+    +Sinh viên mở app và chọn quét mã rồi hệ thống xác thực sinh viên, thời gian, vị trí.
+    +Ghi nhận điểm danh vào cơ sở dữ liệu.
+   -Ràng buộc kỹ thuật:
+    +Mỗi QR chỉ có hiệu lực trong thời gian giới hạn (5 phút).
+    +Mỗi sinh viên chỉ được điểm danh 1 lần.
+    +Phải xác minh đúng lớp.
+  *System Design
+   -Thiết kế giao diện:
+    +Màn hình giảng viên: Tạo buổi học rồi hiển thị QR
+    +Màn hình sinh viên: Scan QR rồi xác nhận điểm danh
+    +Màn hình Admin: Dashboard thống kê
+   -Thiết kế CSDL:
+    | Class     | Thuộc tính                               | Quan hệ          |
+    | --------- | ---------------------------------------- | ---------------- |
+    | SinhVien  | MaSV, HoTen, Lop                         | 1-n với DiemDanh |
+    | GiangVien | MaGV, HoTen                              | 1-n với BuoiHoc  |
+    | BuoiHoc   | MaBuoi, MonHoc, ThoiGian                 | 1-n với DiemDanh |
+    | DiemDanh  | MaSV, MaBuoi, ThoiGian, ViTri, TrangThai |                  |
+   -Kiến trúc hệ thống:
+    +Mobile App
+    +Database (MySQL / PostgreSQL)
+    +QR Generator + Authentication Service
+
+
