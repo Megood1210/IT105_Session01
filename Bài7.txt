@@ -1,0 +1,8 @@
+| Giai đoạn                   | Mục tiêu chính                 | Kết quả đầu ra                  |
+| --------------------------- | ------------------------------ | ------------------------------- |
+| Planning                    | Xác định mục tiêu & kế hoạch   | Báo cáo khả thi, kế hoạch dự án |
+| Requirement Analysis        | Thu thập & phân tích yêu cầu   | Tài liệu SRS                    |
+| System Design               | Thiết kế kiến trúc & giao diện | SDD, Prototype                  |
+| Implementation              | Lập trình & tích hợp           | Phiên bản hệ thống              |
+| Testing                     | Kiểm thử chất lượng            | Báo cáo kiểm thử                |
+| Deployment & Maintenance    | Triển khai & bảo trì           | Hệ thống hoàn chỉnh             |
