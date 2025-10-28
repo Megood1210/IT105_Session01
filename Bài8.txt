@@ -1,0 +1,30 @@
+1.
+| Tác nhân              | Chức năng                                                      |
+|-----------------------|----------------------------------------------------------------|
+| Học viên              | - Đăng ký tài khoản và khóa học                                |
+|                       | - Tham gia lớp học (xem video, làm bài tập, nộp bài)           |          
+|                       | - Xem điểm và tiến độ học tập                                  |
+|                       | - Đánh giá khóa học hoặc giảng viên                            |             
+|-----------------------|----------------------------------------------------------------|                                                                                                                                                                                                                                                                                                                                          
+| Giảng viên            | - Tạo và quản lý bài học, tài liệu                             |
+|                       | - Chấm điểm và nhận xét học viên                               |               
+|                       | - Theo dõi tiến độ lớp học                                     |
+|                       | - Tương tác qua chat hoặc diễn đàn học tập                     |              
+|-----------------------|-------------------------------------- -------------------------|                                                                                                                                                                                                                                                                                                                                            
+| Quản trị viên         | - Quản lý tài khoản học viên và giảng viên                     |
+|                       | - Phân quyền truy cập                                          |               
+|                       | - Theo dõi báo cáo, thống kê học viên và doanh thu             |    
+|                       | - Quản lý dữ liệu khóa học và cấu hình hệ thống                |             
+2.
+ -Loại hệ thống thông tin
+  +TPS + MIS + DSS
+3. Mô hình phát triển phần mềm phù hợp nhất
+ - Mô hình đề xuất: Agile
+- Lý do chọn:
+  +Yêu cầu thay đổi thường xuyên: trung tâm có thể muốn thêm tính năng mới (lớp trực tiếp, bài kiểm tra AI).
+  +Có nhiều bên tham gia: học viên, giảng viên, quản trị viên — cần phản hồi liên tục để cải thiện.
+  +Phát hành từng phần nhỏ: giúp thử nghiệm sớm (ví dụ: ra mắt module học viên trước, giảng viên sau).
+  +Đảm bảo linh hoạt và phản hồi nhanh: phù hợp với môi trường giáo dục đang đổi mới liên tục.
+4. 
+ -Sơ đồ UML sử dụng
+  +Use Case, Class, Activity          
