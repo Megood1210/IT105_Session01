@@ -1,0 +1,55 @@
+1.
+| Tác nhân              | Chức năng                                                                                                 |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|
+| Khách hàng            | - Tạo đơn hàng                                                                                            |
+|                       | - Thanh toán / chọn phương thức thanh toán                                                                |          
+|                       | - Theo dõi trạng thái giao hàng theo thời gian thực                                                       |
+|                       | - Yêu cầu hỗ trợ / khiếu nại, xem lịch sử đơn hàng                                                        |             
+|-----------------------|-----------------------------------------------------------------------------------------------------------|                                                                                                                                                                                                                                                                                                                                          
+| Nhân viên vận chuyển  | - Nhận lệnh giao hàng                                                                                     |
+|                       | - Cập nhật trạng thái                                                                                     |               
+|                       | - Ghi chú, chụp ảnh bằng chứng giao hàng                                                                  |
+|                       | - Cập nhật vị trí GPS theo thời gian thực                                                                 |               
+|-----------------------|-----------------------------------------------------------------------------------------------------------|                                                                                                                                                                                                                                                                                                                                            
+| Nhân viên điều phố    | - Phân đơn/ghép đơn cho tài xế                                                                            |
+|                       | - Điều chỉnh lộ trình, tái phân công khi có sự cố                                                         |               
+|                       | - Theo dõi báo cáo, thống kê học viên và doanh thu                                                        |    
+|                       | - Xem danh sách đơn tồn, SLA vi phạm                                                                      |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|  
+| Quản lý vận hành      | - Theo dõi KPIs vận hành                                                                                  |
+|                       | - Quản lý vùng tồn đọng, dung lượng tài xế theo khu vực                                                   |                
+|                       | - Quản lý khiếu nại, hoàn tiền                                                                            |     
+|-----------------------|-----------------------------------------------------------------------------------------------------------|
+| Admin                 | - Quản lý người dùng, quyền, cấu hình hệ thống                                                            |
+|                       | - Giám sát hạ tầng, logs, backups                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|
+| CEO                   | - Xem dashboard tổng quan: doanh thu, số đơn, vùng hoạt động, tỉ lệ giao đúng hẹn, xu hướng theo thời gian|
+|                       | - Ra quyết định chiến lược                                                                                |               
+2. 
+| Chức năng                                                | Loại hệ thống|                           
+| ---------------------------------------------------------| ------------ | 
+| Tạo đơn hàng, xác nhận đơn, cập nhật trạng thái giao     | TPS          |
+| Theo dõi vị trí GPS thời gian thực của tài xế            | TPS          | 
+| Thanh toán & hoàn tiền                                   | TPS          |
+| Phân công/ghép đơn & tối ưu tuyến                        | DSS          | 
+| Báo cáo vận hành hàng ngày/tuần                          | MIS          |
+| Dashboard CEO: tổng quan giao dịch, vùng hoạt động, KPI  | EIS          | 
+| Phân tích xu hướng / dự báo nhu cầu theo vùng, thời gian | DSS          | 
+| Hệ thống cảnh báo sự cố / SLA vi phạm                    | MIS / DSS    |
+3. Mô hình phát triển phần mềm đề xuất
+ -Đề xuất: Agile + DevOps
+ -Lý do chọn:
+  +Thay đổi yêu cầu thường xuyên: logistics cần điều chỉnh nhanh — Agile cho phép thích nghi nhanh qua sprint ngắn và feedback liên tục từ Ops/shipper/khách hàng
+  +Ưu tiên giao hàng giá trị sớm: TPS cốt lõi (tạo đơn, cập nhật trạng thái) phải hoạt động sớm; Agile cho phép phát hành incremental (MVP) nhanh
+  +Phối hợp với vận hành thực tế: cần UAT với nhân viên điều phối và tài xế — Agile tạo điều kiện cho liên tục thử nghiệm thực tế
+  +Yêu cầu ổn định và triển khai liên tục: DevOps + CI/CD giúp deploy nhanh, rollback an toàn, tự động kiểm thử, giám sát — rất phù hợp cho hệ thống yêu cầu uptime cao
+  +Tích hợp nhiều dịch vụ bên thứ ba: Agile giúp lặp lại và tích hợp từng API/partner theo sprint
+4.
+| Sơ đồ UML        | Mục đích                                                                                                                                                              |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Use Case Diagram | Mô tả actors và các ca sử dụng cao cấp (Tạo đơn, Theo dõi đơn, Cập nhật trạng thái, Phân công đơn, Xem báo cáo). Dùng để xác nhận phạm vi chức năng với stakeholders  |
+| Activity Diagram | Mô tả luồng xử lý nghiệp vụ chi tiết: quá trình order lifecycle. Hữu ích để thiết kế xử lý trạng thái và xác định ràng buộc thời gian/SLA                             |
+
+
+
+          
